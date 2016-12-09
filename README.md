@@ -6,7 +6,7 @@ This script will allow you to run .jss recipes from AutoPkg against multiple jam
 <br>
 **API_PASSWORD** - The password for the account defined above
 <br>
-**AUTOPKG_DIR** - The directory where AutoPkg currently lives along with Recipes and Repos i.e. /Users/<user name>/Documents/AutoPkg/
+**AUTOPKG_DIR** - The directory where AutoPkg currently lives along with Recipes and Repos i.e. `/Users/<user name>/Documents/AutoPkg/`
 <br>
 **RECIPE_LIST** - The name of the list of recipes you wish to run against all servers.  See here for more info: https://github.com/autopkg/autopkg/wiki/Running-Multiple-Recipes#recipe-lists Note: Only one recipe list is currently supported.
 <br>
