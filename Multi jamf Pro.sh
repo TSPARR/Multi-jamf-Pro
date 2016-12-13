@@ -39,4 +39,7 @@ for ((a = 0; a < ${#jamfPro[@]}; a++)); do
 
   /usr/local/bin/autopkg run --recipe-list "$AUTOPKG_DIR"/RecipeOverrides/"$RECIPE_LIST"
 
+  # This isn't really recommended behavior, but I found after repeated runs Autopkg would stop picking up changes to preferences
+  killall cfprefsd
+
 done
