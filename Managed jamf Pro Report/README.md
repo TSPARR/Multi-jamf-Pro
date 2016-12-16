@@ -6,10 +6,12 @@ Create an Advanced Computer Search and an Advanced Mobile Device Search as struc
 
 #### Advanced Computer Search
 Name: All Managed OS X devices
+<br>
 Criteria: Managed is Managed
 
 #### Advanced Mobile Device Search
 Name: All Managed iOS devices
+<br>
 Criteria: Managed is Managed
 
 If you wish to change any names, the variables in the script will need changed to match.
