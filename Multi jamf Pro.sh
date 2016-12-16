@@ -5,7 +5,6 @@ LOGGED_ON_USER=$(python -c 'from SystemConfiguration import SCDynamicStoreCopyCo
 API_USER="api_user"
 API_PASSWORD="api_password"
 AUTOPKG_DIR="autopkg_dir"
-RECIPE_LIST="RecipeList.txt"
 
 # All defined jamfPro Server URLs
 jamfPro[0]=casper01.company.com
@@ -18,6 +17,10 @@ fileShare[1]=fileShare02
 # All defined file share passwords
 sharePassword[0]=sharePassword01
 sharePassword[1]=sharePassword02
+
+# All defined recipe lists
+recipeList[0]=Client1_Recipe_List.txt
+recipeList[1]=Client2_Recipe_List.txt
 
 # Primary loop through all servers
 for ((a = 0; a < ${#jamfPro[@]}; a++)); do
@@ -37,7 +40,7 @@ for ((a = 0; a < ${#jamfPro[@]}; a++)); do
   /usr/libexec/PlistBuddy -c "Add :JSS_REPOS:0:name string ${fileShare[$a]}" /Users/"$LOGGED_ON_USER"/Library/Preferences/com.github.autopkg.plist
   /usr/libexec/PlistBuddy -c "Add :JSS_REPOS:0:password string ${sharePassword[$a]}" /Users/"$LOGGED_ON_USER"/Library/Preferences/com.github.autopkg.plist
 
-  /usr/local/bin/autopkg run --recipe-list "$AUTOPKG_DIR"/RecipeOverrides/"$RECIPE_LIST"
+  /usr/local/bin/autopkg run --recipe-list "$AUTOPKG_DIR"/RecipeOverrides/"${recipeList[$a]}"
 
   # This isn't really recommended behavior, but I found after repeated runs Autopkg would stop picking up changes to preferences
   killall cfprefsd
