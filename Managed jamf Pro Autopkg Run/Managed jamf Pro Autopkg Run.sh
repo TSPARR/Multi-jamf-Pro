@@ -1,4 +1,6 @@
 #!/bin/bash
+# Managed jamf Pro Autopkg Run.sh
+# Runs AutoPkg tasks against multiple jamf Pro servers
 
 # All defined constants
 LOGGED_ON_USER=$(python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]]; sys.stdout.write(username + "\n");')
