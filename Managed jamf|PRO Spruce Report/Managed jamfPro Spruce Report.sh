@@ -32,6 +32,6 @@ for ((a = 0; a < ${#jamfPro[@]}; a++)); do
 
   killall cfprefsd
 
-  "$SPRUCE_DIR"/spruce.py --packages -o "$REPORT_DIR"/"${jamfPro[$a]}".xml
+  "$SPRUCE_DIR"/spruce.py -o "$REPORT_DIR"/"${jamfPro[$a]}".xml
 
 done
