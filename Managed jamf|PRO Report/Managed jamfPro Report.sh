@@ -8,7 +8,7 @@
 OUTPUT_XML="/tmp/tempList.xml"
 DATABASE="/tmp/tempList.DB"
 REPORT_USER="api_user"
-REPORT_PASSWORD="grant83_taro"
+REPORT_PASSWORD="api_password"
 COMPUTER_GROUP="All%20Managed%20OS%20X%20Devices"
 MOBILE_DEVICE_GROUP="All%20Managed%20iOS%20Devices"
 
